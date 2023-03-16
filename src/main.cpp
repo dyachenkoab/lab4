@@ -10,5 +10,7 @@ int main()
     mySpace::printIP(list<short> { 400, 300, 200, 100 });
     mySpace::printIP(string { "Hello world!" });
 
+    mySpace::printIP(uint8_t { 42 });
+
     return 0;
 }

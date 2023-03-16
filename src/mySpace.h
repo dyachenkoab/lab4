@@ -9,6 +9,7 @@
 #include <vector>
 #include <algorithm>
 #include <list>
+#include <iterator>
 using namespace std;
 
 /** \mainpage
@@ -68,9 +69,9 @@ template<template<typename, typename> typename Container, typename Type, typenam
                       vector<Type, Allocator>> || is_same_v<Container<Type, Allocator>, list<Type, Allocator>>>>
 void printIP(const Container<Type, Allocator> &container)
 {
-    for (const auto &x : container) {
-        printString(x);
-        cout << ((x == container.back()) ? "\n" : ".");
+    for (auto it = container.cbegin(), end = container.cend(), lastItem = prev(container.cend()); it != end; ++it) {
+        printString(*it);
+        cout << ((it == lastItem) ? "\n" : ".");
     }
 }
 
@@ -89,7 +90,7 @@ void printIP(const bString<CharT, Traits, Allocator> &s)
 /*!  \brief prints bytes, starts from highest.
  *  @tparam num Number to print. Convers number to bitset and print.
 */
-template<typename Type, typename = enable_if_t<is_signed_v<Type>>>
+template<typename Type, typename = enable_if_t<is_integral_v<Type> && !is_same_v<bool, Type>>>
 void printIP(const Type &num)
 {
     bitset<numeric_limits<Type>::digits + 1> b(num);
@@ -98,6 +99,15 @@ void printIP(const Type &num)
     dotted(bitString, bitString.size(), res);
     printString(res);
     cout << endl;
+
+//    auto bytes = reinterpret_cast<const unsigned char*>(&num);
+//    auto end = bytes + sizeof(Type);
+//    copy(
+//        make_reverse_iterator(end),
+//        make_reverse_iterator(bytes + 1),
+//        ostream_iterator<unsigned>(std::cout, ".")
+//    );
+//    std::cout << unsigned(*bytes) << std::endl;
 }
 
 } // namespace mySpace
