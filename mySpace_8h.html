@@ -90,12 +90,13 @@ $(function() {
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;list&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mySpace.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mySpace_8h__incl.png" border="0" usemap="#a_2github_2workspace_2src_2mySpace_8h" alt=""/></div>
 <map name="a_2github_2workspace_2src_2mySpace_8h" id="a_2github_2workspace_2src_2mySpace_8h">
-<area shape="rect" title=" " alt="" coords="314,5,465,45"/>
+<area shape="rect" title=" " alt="" coords="354,5,505,45"/>
 <area shape="rect" title=" " alt="" coords="5,93,77,119"/>
 <area shape="rect" title=" " alt="" coords="101,93,171,119"/>
 <area shape="rect" title=" " alt="" coords="195,93,250,119"/>
@@ -105,6 +106,7 @@ Include dependency graph for mySpace.h:</div>
 <area shape="rect" title=" " alt="" coords="523,93,581,119"/>
 <area shape="rect" title=" " alt="" coords="605,93,680,119"/>
 <area shape="rect" title=" " alt="" coords="705,93,743,119"/>
+<area shape="rect" title=" " alt="" coords="767,93,830,119"/>
 </map>
 </div>
 </div>
@@ -132,7 +134,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a64ee9b80eda0c0c5c09307b48af40762"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemySpace.html#a64ee9b80eda0c0c5c09307b48af40762">mySpace::printIP</a> (const bString&lt; CharT, Traits, Allocator &gt; &amp;s)</td></tr>
 <tr class="memdesc:a64ee9b80eda0c0c5c09307b48af40762"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints basic_string.  <a href="namespacemySpace.html#a64ee9b80eda0c0c5c09307b48af40762">More...</a><br /></td></tr>
 <tr class="separator:a64ee9b80eda0c0c5c09307b48af40762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memTemplParams" colspan="2">template&lt;typename Type , typename  = enable_if_t&lt;is_signed_v&lt;Type&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memTemplParams" colspan="2">template&lt;typename Type , typename  = enable_if_t&lt;is_integral_v&lt;Type&gt; &amp;&amp; !is_same_v&lt;bool, Type&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemySpace.html#a23a371bb9fc2c58c37ab2c2a5b180006">mySpace::printIP</a> (const Type &amp;num)</td></tr>
 <tr class="memdesc:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints bytes, starts from highest.  <a href="namespacemySpace.html#a23a371bb9fc2c58c37ab2c2a5b180006">More...</a><br /></td></tr>
 <tr class="separator:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memSeparator" colspan="2">&#160;</td></tr>

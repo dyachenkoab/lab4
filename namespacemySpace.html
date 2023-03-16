@@ -94,7 +94,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a64ee9b80eda0c0c5c09307b48af40762"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemySpace.html#a64ee9b80eda0c0c5c09307b48af40762">printIP</a> (const bString&lt; CharT, Traits, Allocator &gt; &amp;s)</td></tr>
 <tr class="memdesc:a64ee9b80eda0c0c5c09307b48af40762"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints basic_string.  <a href="namespacemySpace.html#a64ee9b80eda0c0c5c09307b48af40762">More...</a><br /></td></tr>
 <tr class="separator:a64ee9b80eda0c0c5c09307b48af40762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memTemplParams" colspan="2">template&lt;typename Type , typename  = enable_if_t&lt;is_signed_v&lt;Type&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memTemplParams" colspan="2">template&lt;typename Type , typename  = enable_if_t&lt;is_integral_v&lt;Type&gt; &amp;&amp; !is_same_v&lt;bool, Type&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemySpace.html#a23a371bb9fc2c58c37ab2c2a5b180006">printIP</a> (const Type &amp;num)</td></tr>
 <tr class="memdesc:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints bytes, starts from highest.  <a href="namespacemySpace.html#a23a371bb9fc2c58c37ab2c2a5b180006">More...</a><br /></td></tr>
 <tr class="separator:a23a371bb9fc2c58c37ab2c2a5b180006"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,7 +213,7 @@ template&lt;template&lt; typename, typename &gt; typename Container, typename Ty
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type , typename  = enable_if_t&lt;is_signed_v&lt;Type&gt;&gt;&gt; </div>
+template&lt;typename Type , typename  = enable_if_t&lt;is_integral_v&lt;Type&gt; &amp;&amp; !is_same_v&lt;bool, Type&gt;&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void mySpace::printIP </td>
